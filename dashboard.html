@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Dashboard</title>
+    <style>
+        body {
+            background-color: #181818; /* Dark background color */
+            color: #fff; /* Text color */
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #282828;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px; /* Adjust width as needed */
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .header .settings {
+            font-size: 20px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            background-color: #383838;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+            width: 100%;
+        }
+
+        .search-bar .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #fff;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .stat-card {
+            background-color: #383838;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Stat Card Colors */
+        .stat-card:nth-child(1) { background-color: #90EE90; } /* Sales */
+        .stat-card:nth-child(2) { background-color: #FFFF00; } /* Customers */
+        .stat-card:nth-child(3) { background-color: #FFA07A; } /* Products */
+        .stat-card:nth-child(4) { background-color: #00FFFF; } /* Revenue */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="user_image.jpg" alt="User Image">
+            <div class="settings">
+                <i class="fas fa-cog"></i> 
+            </div>
+        </div>
+
+        <h1>Hello, <span id="customer-name">username</span></h1>
+        <p>Welcome Back!</p>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search keyword">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>230k</h3>
+                <p>Sales</p>
+            </div>
+            <div class="stat-card">
+                <span id="last-payment-id">${closestRow1.row[4]}</span>
+                <p>Last Payment</p>
+            </div>
+            <div class="stat-card">
+                <h3>1,423k</h3>
+                <p>Products</p>
+            </div>
+            <div class="stat-card">
+                <h3>$9745</h3>
+                <p>Revenue</p>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/config.js"></script>
+    <script src="../scripts/google-sheets-api.js"></script>
+    <script src="../customer311224.js"></script>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/pagination.js"></script>
+    <script src="../scripts/order2.js"></script>
+    <script src="../scripts/offerlayout.js"></script>
+
+</body>
+</html>
