@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Photo id:', user[3]);
                 // Redirect based on user type
                 if (user[2] === 'staff') {
-                    window.location.href = './staff120125.html';
+                    window.location.href = './pages/staff120125.html';
                 } else if (user[2] === 'customer') {
                    // customerphoto.src = user[3];
-                    window.location.href = '../pages/customer070125.html';
+                    window.location.href = './pages/customer070125.html';
 
                 } else {
                     errorMessage.textContent = 'Unauthorized Access';
